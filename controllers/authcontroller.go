@@ -11,10 +11,13 @@ import (
 )
 
 type User struct {
-	Name     string `json:"name"`
-	Email    string `json:"email"`
-	Password string `json:"password"`
-	Role     string `json:"role"`
+	FirstName   string `json:"first_name"`
+	LastName    string `json:"last_name"`
+	Email       string `json:"email"`
+	Password    string `json:"password"`
+	Role        string `json:"role"`
+	Gender      string `json:"gender"`
+	YearOfBirth int    `json:"year_of_birth"`
 }
 
 func Register(c *gin.Context) {
@@ -37,14 +40,13 @@ func Login(c *gin.Context) {
 	var input User
 	c.ShouldBindJSON(&input)
 
-	// query Supabase
 	res, err := db.Select("users", "email=eq."+input.Email)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 		return
 	}
 
-	var users []User
+	var users []map[string]interface{}
 	json.Unmarshal(res, &users)
 
 	if len(users) == 0 {
@@ -54,12 +56,23 @@ func Login(c *gin.Context) {
 
 	user := users[0]
 
-	if !utils.CheckPassword(user.Password, input.Password) {
+	password := user["password"].(string)
+	role := user["role"].(string)
+	id := user["id"]
+
+	if !utils.CheckPassword(password, input.Password) {
 		c.JSON(http.StatusUnauthorized, gin.H{"error": "Invalid password"})
 		return
 	}
 
-	token, _ := utils.GenerateToken(1, user.Role)
+	token, _ := utils.GenerateToken(
+		toString(id),
+		role,
+	)
 
 	c.JSON(http.StatusOK, gin.H{"token": token})
+}
+
+func toString(v interface{}) string {
+	return fmt.Sprintf("%v", v)
 }
