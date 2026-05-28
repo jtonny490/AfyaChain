@@ -1,3 +1,5 @@
+## Project structure
+<pre>
 afyachain/
 │
 ├── frontend/
@@ -53,4 +55,5 @@ afyachain/
 │   └── uploads/
 │
 ├── README.md
-└── go.mod
+└── go.
+</pre>
