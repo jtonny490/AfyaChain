@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AfyaChain - Patient EMR Portal</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+
+    <!-- Mobile Header Bar -->
+    <div class="mobile-header-bar">
+      <div style="display: flex; align-items: center; gap: 0.5rem; font-weight: 700;">
+        <div class="brand-icon" style="width:30px; height:30px;">
+          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:100%;">
+            <defs>
+              <linearGradient id="shieldGradMobile" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#022E7A" />
+                <stop offset="100%" stop-color="#0D6EFD" />
+              </linearGradient>
+            </defs>
+            <path d="M50 8 C72 8 85 18 85 18 C85 43 78 72 50 90 C22 72 15 43 15 18 C15 18 28 8 50 8 Z" fill="url(#shieldGradMobile)" stroke="#12B5FF" stroke-width="2.5" />
+            <rect x="5" y="25" width="4.5" height="4.5" fill="#5CCEFF" opacity="0.8" rx="1" />
+            <rect x="9" y="34" width="4.5" height="4.5" fill="#12B5FF" opacity="0.9" rx="1" />
+            <rect x="4" y="42" width="4.5" height="4.5" fill="#5CCEFF" opacity="0.7" rx="1" />
+            <rect x="8" y="50" width="5" height="5" fill="#0D6EFD" rx="1.5" />
+            <rect x="12" y="44" width="4" height="4" fill="#FFFFFF" opacity="0.8" rx="1" />
+            <rect x="13" y="30" width="4" height="4" fill="#12B5FF" rx="1" />
+            <path d="M52 48 H58 L61 36 L65 60 L68 45 L70 51 H76" stroke="#5CCEFF" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" />
+            <circle cx="50" cy="27" r="4.5" fill="#12B5FF" />
+            <path d="M36 39 C42 35 48 34 50 34 C52 34 58 35 64 39 C55 43 52 48 51 57 M49 57 C48 48 45 43 36 39" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M50 36 V60" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" />
+            <line x1="38" y1="67" x2="48" y2="59" stroke="#12B5FF" stroke-width="6" stroke-linecap="round" />
+            <line x1="42" y1="71" x2="52" y2="63" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" />
+          </svg>
+        </div>
+        AfyaChain
+      </div>
+      <button class="mobile-nav-toggle btn btn-sm btn-outline">
+        <svg style="width:20px; height:20px;" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="dashboard-wrapper">
+      
+      <!-- Persistent Sidebar Navigation -->
+      <aside class="sidebar">
+        <div class="sidebar-logo">
+          <div class="brand-icon" style="width:32px; height:32px;">
+            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:100%;">
+              <defs>
+                <linearGradient id="shieldGradSidebar" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#022E7A" />
+                  <stop offset="100%" stop-color="#0D6EFD" />
+                </linearGradient>
+              </defs>
+              <path d="M50 8 C72 8 85 18 85 18 C85 43 78 72 50 90 C22 72 15 43 15 18 C15 18 28 8 50 8 Z" fill="url(#shieldGradSidebar)" stroke="#12B5FF" stroke-width="2.5" />
+              <rect x="5" y="25" width="4.5" height="4.5" fill="#5CCEFF" opacity="0.8" rx="1" />
+              <rect x="9" y="34" width="4.5" height="4.5" fill="#12B5FF" opacity="0.9" rx="1" />
+              <rect x="4" y="42" width="4.5" height="4.5" fill="#5CCEFF" opacity="0.7" rx="1" />
+              <rect x="8" y="50" width="5" height="5" fill="#0D6EFD" rx="1.5" />
+              <rect x="12" y="44" width="4" height="4" fill="#FFFFFF" opacity="0.8" rx="1" />
+              <rect x="13" y="30" width="4" height="4" fill="#12B5FF" rx="1" />
+              <path d="M52 48 H58 L61 36 L65 60 L68 45 L70 51 H76" stroke="#5CCEFF" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" />
+              <circle cx="50" cy="27" r="4.5" fill="#12B5FF" />
+              <path d="M36 39 C42 35 48 34 50 34 C52 34 58 35 64 39 C55 43 52 48 51 57 M49 57 C48 48 45 43 36 39" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M50 36 V60" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" />
+              <line x1="38" y1="67" x2="48" y2="59" stroke="#12B5FF" stroke-width="6" stroke-linecap="round" />
+              <line x1="42" y1="71" x2="52" y2="63" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" />
+            </svg>
+          </div>
+          <span class="sidebar-logo-text">Afya<span>Chain</span></span>
+        </div>
+
+        <ul class="sidebar-menu">
+          <li>
+            <a href="patient-dashboard.html" class="sidebar-link active">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2H6a2 2 0 01-2-2v-4zM14 16a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2h-2a2 2 0 01-2-2v-4z"></path></svg>
+              My Dashboard
+            </a>
+          </li>
+          <li>
+            <a href="upload-record.html" class="sidebar-link">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path></svg>
+              Upload EMR File
+            </a>
+          </li>
+          <li>
+            <a href="access-management.html" class="sidebar-link">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+              Consent Manager
+            </a>
+          </li>
+          <li>
+            <a href="index.html" class="sidebar-link">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+              Logout Home
+            </a>
+          </li>
+        </ul>
+
+        <div class="sidebar-user">
+          <div class="user-avatar">AM</div>
+          <div class="user-info">
+            <span class="user-name">Alex Mercer</span>
+            <span class="user-role">ID: AM-9921-X</span>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Dashboard Content View (Main Window with Bento Theme) -->
+      <main class="dashboard-content">
+        <header style="margin-bottom: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap:1.5rem;">
+          <div>
+            <h1 style="font-size: 1.85rem; font-weight: 800; color: var(--primary-deep); margin-bottom: 0.25rem;">Patient Control Center</h1>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">Decentralized EMR ledger state updated: <strong>Connected to Nairobi Ethereum Node</strong></p>
+          </div>
+          <div class="hero-ctas" style="margin: 0; display: flex; gap: 0.75rem;">
+            <button class="btn btn-outline" id="scan-qr-btn-header" style="gap: 0.5rem; display: inline-flex; align-items: center; border-color: var(--blockchain-blue); color: var(--blockchain-blue);">
+              📷 Instant QR Scan
+            </button>
+            <a href="upload-record.html" class="btn btn-primary">
+              <span style="font-size:1.15rem;">+</span> Upload Record File
+            </a>
+          </div>
+        </header>
+
+        <!-- Bento Layout Grid -->
+        <div class="bento-grid">
+          <!-- Bento Stat 1: Records Count (Span 1) -->
+          <div class="bento-card" style="grid-column: span 1;">
+            <svg class="blockchain-viz" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/>
+            </svg>
+            <span class="card-title">Secured Records</span>
+            <div class="stat" id="records-count">...</div>
+            <div class="badge-bento badge-bento-success">IPFS Active</div>
+          </div>
+
+          <!-- Bento Stat 2: Active permissions (Span 1) -->
+          <div class="bento-card" style="grid-column: span 1;">
+            <span class="card-title">Clinician Keys</span>
+            <div class="stat" id="active-perms-count">...</div>
+            <div class="badge-bento badge-bento-cyan">Authorized</div>
+          </div>
+
+          <!-- Bento Stat 3: Encrypted security banner (Span 2) -->
+          <div class="bento-card" style="grid-column: span 2; background: linear-gradient(135deg, var(--p-blue), var(--p-deep)); color: white;">
+            <span class="card-title" style="color: rgba(255,255,255,0.65);">Encryption Status</span>
+            <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-top: auto;">
+              <div>
+                <h3 style="font-size: 1.4rem; font-weight:800; margin-bottom:0.15rem;">Zero-Knowledge Shield Live</h3>
+                <p style="font-size:0.75rem; opacity:0.8; max-width: 320px;">AES-256 secure hash layers. No unverified nodes can crack patient profile logs.</p>
+              </div>
+              <button class="btn btn-sm btn-accent" style="white-space:nowrap; background:white; color:var(--primary-deep);" onclick="window.location.href='access-management.html'">View Audits</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section: My Medical Records Table (Full col width) -->
+        <section style="margin-bottom: 2.5rem;">
+          <h2 style="font-size:1.35rem; font-weight: 800; color:var(--primary-deep); margin-top:2rem; margin-bottom:1.25rem; display:flex; justify-content:space-between; align-items:center;">
+            My Medical Records (IPFS Decrypter)
+          </h2>
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Record ID</th>
+                  <th>Hospital Anchor</th>
+                  <th>Diagnostic Folder Label</th>
+                  <th>Registered Epoch Date</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="records-table-body">
+                <!-- Javascript will load entries -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Section: Quick Actions & Access Permissions (Dual column bento elements) -->
+        <div class="bento-grid" style="grid-template-columns: repeat(3, 1fr);">
+          
+          <!-- Column 1 & 2: Active Access Permissions -->
+          <div style="grid-column: span 2;">
+            <h2 style="font-size:1.35rem; font-weight: 800; color:var(--primary-deep); margin-bottom:1.25rem;">Active Doctor Consents</h2>
+            <div id="permissions-grid" style="display:grid; grid-template-columns: 1fr 1fr; gap:1.25rem;">
+              <!-- Dynamic permission cards rendered here -->
+            </div>
+          </div>
+
+          <!-- Column 3: Quick Utilities Box -->
+          <div class="bento-card" style="grid-column: span 1; justify-content: flex-start; gap: 1.25rem; height: auto;">
+            <span class="card-title">Sovereign Utilities</span>
+            <div style="display: flex; flex-direction: column; gap:0.95rem; width:100%;">
+              <a href="upload-record.html" class="btn btn-outline" style="width: 100%; justify-content: flex-start; gap: 0.85rem;">
+                📚 Upload Lab Assays
+              </a>
+              <a href="access-management.html" class="btn btn-outline" style="width: 100%; justify-content: flex-start; gap: 0.85rem;">
+                🛡️ Consent Delegation
+              </a>
+              <button class="btn btn-outline" id="scan-qr-btn-utilities" style="width: 100%; justify-content: flex-start; gap: 0.85rem; border-color: var(--blockchain-blue); color: var(--blockchain-blue);">
+                📷 Instant QR Code Scan
+              </button>
+              <hr style="border:none; border-top:1px solid var(--border-color); margin: 0.25rem 0;">
+              <div>
+                <p style="font-size: 0.75rem; color:var(--text-muted); margin-bottom: 0.5rem; font-weight:500;">EMERGENCY ACCORD PROTOCOL</p>
+                <button class="btn btn-danger" id="emergency-access-btn" style="width: 100%; font-size:0.85rem;">
+                  🚨 Emergency Bypass Override
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </main>
+    </div>
+
+    <!-- Scripts Integration with proper order -->
+    <script src="../js/api.js"></script>
+    <script src="../js/patient.js"></script>
+  </body>
+</html>

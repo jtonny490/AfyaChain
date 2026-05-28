@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AfyaChain - Clinician Workspace</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+
+    <!-- Mobile Header Bar -->
+    <div class="mobile-header-bar">
+      <div style="display: flex; align-items: center; gap: 0.5rem; font-weight: 700;">
+        <div class="brand-icon" style="width:30px; height:30px;">
+          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:100%;">
+            <defs>
+              <linearGradient id="shieldGradMobileDoc" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#022E7A" />
+                <stop offset="100%" stop-color="#0D6EFD" />
+              </linearGradient>
+            </defs>
+            <path d="M50 8 C72 8 85 18 85 18 C85 43 78 72 50 90 C22 72 15 43 15 18 C15 18 28 8 50 8 Z" fill="url(#shieldGradMobileDoc)" stroke="#12B5FF" stroke-width="2.5" />
+            <rect x="5" y="25" width="4.5" height="4.5" fill="#5CCEFF" opacity="0.8" rx="1" />
+            <rect x="9" y="34" width="4.5" height="4.5" fill="#12B5FF" opacity="0.9" rx="1" />
+            <rect x="4" y="42" width="4.5" height="4.5" fill="#5CCEFF" opacity="0.7" rx="1" />
+            <rect x="8" y="50" width="5" height="5" fill="#0D6EFD" rx="1.5" />
+            <rect x="12" y="44" width="4" height="4" fill="#FFFFFF" opacity="0.8" rx="1" />
+            <rect x="13" y="30" width="4" height="4" fill="#12B5FF" rx="1" />
+            <path d="M52 48 H58 L61 36 L65 60 L68 45 L70 51 H76" stroke="#5CCEFF" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" />
+            <circle cx="50" cy="27" r="4.5" fill="#12B5FF" />
+            <path d="M36 39 C42 35 48 34 50 34 C52 34 58 35 64 39 C55 43 52 48 51 57 M49 57 C48 48 45 43 36 39" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M50 36 V60" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" />
+            <line x1="38" y1="67" x2="48" y2="59" stroke="#12B5FF" stroke-width="6" stroke-linecap="round" />
+            <line x1="42" y1="71" x2="52" y2="63" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" />
+          </svg>
+        </div>
+        AfyaChain
+      </div>
+      <button class="mobile-nav-toggle btn btn-sm btn-outline">
+        <svg style="width:20px; height:20px;" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="dashboard-wrapper">
+      
+      <!-- Persistent Sidebar Navigation for Doctor Panel -->
+      <aside class="sidebar" style="background-color: #0b1c3d;">
+        <div class="sidebar-logo" style="border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
+          <div class="brand-icon" style="width:32px; height:32px;">
+            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:100%;">
+              <defs>
+                <linearGradient id="shieldGradSidebarDoc" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#022E7A" />
+                  <stop offset="100%" stop-color="#0D6EFD" />
+                </linearGradient>
+              </defs>
+              <path d="M50 8 C72 8 85 18 85 18 C85 43 78 72 50 90 C22 72 15 43 15 18 C15 18 28 8 50 8 Z" fill="url(#shieldGradSidebarDoc)" stroke="#12B5FF" stroke-width="2.5" />
+              <rect x="5" y="25" width="4.5" height="4.5" fill="#5CCEFF" opacity="0.8" rx="1" />
+              <rect x="9" y="34" width="4.5" height="4.5" fill="#12B5FF" opacity="0.9" rx="1" />
+              <rect x="4" y="42" width="4.5" height="4.5" fill="#5CCEFF" opacity="0.7" rx="1" />
+              <rect x="8" y="50" width="5" height="5" fill="#0D6EFD" rx="1.5" />
+              <rect x="12" y="44" width="4" height="4" fill="#FFFFFF" opacity="0.8" rx="1" />
+              <rect x="13" y="30" width="4" height="4" fill="#12B5FF" rx="1" />
+              <path d="M52 48 H58 L61 36 L65 60 L68 45 L70 51 H76" stroke="#5CCEFF" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" />
+              <circle cx="50" cy="27" r="4.5" fill="#12B5FF" />
+              <path d="M36 39 C42 35 48 34 50 34 C52 34 58 35 64 39 C55 43 52 48 51 57 M49 57 C48 48 45 43 36 39" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M50 36 V60" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" />
+              <line x1="38" y1="67" x2="48" y2="59" stroke="#12B5FF" stroke-width="6" stroke-linecap="round" />
+              <line x1="42" y1="71" x2="52" y2="63" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" />
+            </svg>
+          </div>
+          <span class="sidebar-logo-text">Afya<span>Clinics</span></span>
+        </div>
+
+        <ul class="sidebar-menu">
+          <li>
+            <a href="doctor-dashboard.html" class="sidebar-link active">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+              Clinician Dashboard
+            </a>
+          </li>
+          <li>
+            <a href="index.html" class="sidebar-link">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+              Logout Home
+            </a>
+          </li>
+        </ul>
+
+        <div class="sidebar-user" style="background-color: rgba(255, 255, 255, 0.03);">
+          <div class="user-avatar" style="background-color: var(--blockchain-blue); color: var(--white);">SJ</div>
+          <div class="user-info">
+            <span class="user-name">Dr. Juma Tonny</span>
+            <span class="user-role">Nairobi Nat. Hospital</span>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Dashboard Workspace -->
+      <main class="dashboard-content">
+        <header style="margin-bottom: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap:1.5rem;">
+          <div>
+            <h1 style="font-size: 1.85rem; font-weight: 800; color: var(--primary-deep); margin-bottom: 0.25rem;">Doctor Healthcare Workspace</h1>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">Node Sync Authorized: Dr. Juma Tonny (Nairobi Medical License: verified)</p>
+          </div>
+          <div class="hero-ctas" style="margin: 0;">
+            <button class="btn btn-accent" onclick="openRequestAccessModal()">
+              Request Patient Consent
+            </button>
+          </div>
+        </header>
+
+        <!-- Bento Grid Stats Array -->
+        <div class="bento-grid">
+          <!-- Stat block 1 -->
+          <div class="bento-card" style="grid-column: span 1;">
+            <span class="card-title">Registered Patients</span>
+            <div class="stat" id="stat-connected-patients">...</div>
+            <div class="badge-bento badge-bento-cyan">Direct Tracked</div>
+          </div>
+
+          <!-- Stat block 2 -->
+          <div class="bento-card" style="grid-column: span 1;">
+            <span class="card-title">Pending Authorizations</span>
+            <div class="stat" id="stat-pending-requests">...</div>
+            <div class="badge-bento badge-bento-cyan" style="background:var(--warning-bg); color:var(--warning);">In Queue</div>
+          </div>
+
+          <!-- Stat block 3 -->
+          <div class="bento-card" style="grid-column: span 1;">
+            <span class="card-title">Licensed EMR Views</span>
+            <div class="stat" id="stat-verified-access">...</div>
+            <div class="badge-bento badge-bento-success">Ready to Decrypt</div>
+          </div>
+
+          <!-- Stat block 4 (Bento Security) -->
+          <div class="bento-card" style="grid-column: span 1; background: #0044b3; color: white;">
+            <span class="card-title" style="color: rgba(255,255,255,0.7);">Compliance Node</span>
+            <div style="font-size:1.15rem; font-weight: 700; margin-top: auto;">HIPAA & GDPR Compliant</div>
+            <p style="font-size:0.7rem; opacity:0.8; margin-top: 4px;">Transactions registered on AfyaChain are cryptographically audit-sealed.</p>
+          </div>
+        </div>
+
+        <!-- Outgoing Requests & Access Approvals Queue Table -->
+        <section style="margin-bottom: 2.5rem;">
+          <h2 style="font-size:1.35rem; font-weight: 800; color:var(--primary-deep); margin-bottom:1.25rem;">Patient Records Authorization Queue</h2>
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Patient Identity</th>
+                  <th>Clinical Follow-Up Category</th>
+                  <th>Requested Access Strength</th>
+                  <th>Access status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="requests-queue-body">
+                <!-- Javascript dynamic loading queue -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Audit trail list displaying recent events -->
+        <section style="margin-bottom: 1.5rem;">
+          <h2 style="font-size:1.35rem; font-weight: 800; color:var(--primary-deep); margin-bottom:1.25rem;">Nairobi Clinic Node Log Timeline</h2>
+          <div class="card" style="border-radius:16px;">
+            <div class="timeline" id="doctor-audit-timeline">
+              <!-- Dynamically mapped audit actions -->
+            </div>
+          </div>
+        </section>
+
+      </main>
+    </div>
+
+    <!-- Create Request Access Modal -->
+    <div class="modal-backdrop" id="request-access-modal">
+      <div class="modal">
+        <div class="modal-header">
+          <h3 class="card-title">Request Patient Record Authorization</h3>
+          <button class="modal-close" onclick="closeRequestAccessModal()">✕</button>
+        </div>
+        <form id="request-access-form">
+          <div class="modal-body">
+            <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.25rem;">
+              Transmit a cryptographic registry query inviting the patient to unlock their medical histories for diagnostics and health care tracing.
+            </p>
+            <div class="form-group">
+              <label class="form-label" for="clinical-patient-name">Patient EMR Name</label>
+              <input type="text" class="form-control" id="clinical-patient-name" placeholder="e.g. Alex Mercer" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="clinical-purpose">Clinical Assessment Type</label>
+              <select class="form-control" id="clinical-purpose">
+                <option value="Cardiorespiratory Follow-up">Cardiorespiratory Follow-up</option>
+                <option value="Blood Panel (Complete)">Blood Laboratory Assays</option>
+                <option value="MRI Brain Scan">MRI Neurology diagnostic</option>
+                <option value="Comprehensive General Exam">Comprehensive General Exam</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="clinical-access-level">Requested Access Strength</label>
+              <select class="form-control" id="clinical-access-level">
+                <option value="Read Only">Read Only (AES Cipher decryption)</option>
+                <option value="Full Control">Full Control (Record modifications allowed)</option>
+              </select>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline" onclick="closeRequestAccessModal()">Cancel</button>
+            <button type="submit" class="btn btn-primary">Publish Request Block</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Script components -->
+    <script src="../js/api.js"></script>
+    <script src="../js/doctor.js"></script>
+  </body>
+</html>

@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AfyaChain - Encrypt & Upload Medical Record</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+
+    <!-- Mobile Header Bar -->
+    <div class="mobile-header-bar">
+      <div style="display: flex; align-items: center; gap: 0.5rem; font-weight: 700;">
+        <div class="brand-icon" style="width:30px; height:30px;">
+          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:100%;">
+            <defs>
+              <linearGradient id="shieldGradMobileUpload" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#022E7A" />
+                <stop offset="100%" stop-color="#0D6EFD" />
+              </linearGradient>
+            </defs>
+            <path d="M50 8 C72 8 85 18 85 18 C85 43 78 72 50 90 C22 72 15 43 15 18 C15 18 28 8 50 8 Z" fill="url(#shieldGradMobileUpload)" stroke="#12B5FF" stroke-width="2.5" />
+            <rect x="5" y="25" width="4.5" height="4.5" fill="#5CCEFF" opacity="0.8" rx="1" />
+            <rect x="9" y="34" width="4.5" height="4.5" fill="#12B5FF" opacity="0.9" rx="1" />
+            <rect x="4" y="42" width="4.5" height="4.5" fill="#5CCEFF" opacity="0.7" rx="1" />
+            <rect x="8" y="50" width="5" height="5" fill="#0D6EFD" rx="1.5" />
+            <rect x="12" y="44" width="4" height="4" fill="#FFFFFF" opacity="0.8" rx="1" />
+            <rect x="13" y="30" width="4" height="4" fill="#12B5FF" rx="1" />
+            <path d="M52 48 H58 L61 36 L65 60 L68 45 L70 51 H76" stroke="#5CCEFF" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" />
+            <circle cx="50" cy="27" r="4.5" fill="#12B5FF" />
+            <path d="M36 39 C42 35 48 34 50 34 C52 34 58 35 64 39 C55 43 52 48 51 57 M49 57 C48 48 45 43 36 39" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M50 36 V60" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" />
+            <line x1="38" y1="67" x2="48" y2="59" stroke="#12B5FF" stroke-width="6" stroke-linecap="round" />
+            <line x1="42" y1="71" x2="52" y2="63" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" />
+          </svg>
+        </div>
+        AfyaChain
+      </div>
+      <button class="mobile-nav-toggle btn btn-sm btn-outline">
+        <svg style="width:20px; height:20px;" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="dashboard-wrapper">
+      
+      <!-- Sidebar Navigation for Patient Layout -->
+      <aside class="sidebar">
+        <div class="sidebar-logo">
+          <div class="brand-icon" style="width:32px; height:32px;">
+            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:100%;">
+              <defs>
+                <linearGradient id="shieldGradSidebarUpload" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#022E7A" />
+                  <stop offset="100%" stop-color="#0D6EFD" />
+                </linearGradient>
+              </defs>
+              <path d="M50 8 C72 8 85 18 85 18 C85 43 78 72 50 90 C22 72 15 43 15 18 C15 18 28 8 50 8 Z" fill="url(#shieldGradSidebarUpload)" stroke="#12B5FF" stroke-width="2.5" />
+              <rect x="5" y="25" width="4.5" height="4.5" fill="#5CCEFF" opacity="0.8" rx="1" />
+              <rect x="9" y="34" width="4.5" height="4.5" fill="#12B5FF" opacity="0.9" rx="1" />
+              <rect x="4" y="42" width="4.5" height="4.5" fill="#5CCEFF" opacity="0.7" rx="1" />
+              <rect x="8" y="50" width="5" height="5" fill="#0D6EFD" rx="1.5" />
+              <rect x="12" y="44" width="4" height="4" fill="#FFFFFF" opacity="0.8" rx="1" />
+              <rect x="13" y="30" width="4" height="4" fill="#12B5FF" rx="1" />
+              <path d="M52 48 H58 L61 36 L65 60 L68 45 L70 51 H76" stroke="#5CCEFF" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" />
+              <circle cx="50" cy="27" r="4.5" fill="#12B5FF" />
+              <path d="M36 39 C42 35 48 34 50 34 C52 34 58 35 64 39 C55 43 52 48 51 57 M49 57 C48 48 45 43 36 39" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M50 36 V60" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" />
+              <line x1="38" y1="67" x2="48" y2="59" stroke="#12B5FF" stroke-width="6" stroke-linecap="round" />
+              <line x1="42" y1="71" x2="52" y2="63" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" />
+            </svg>
+          </div>
+          <span class="sidebar-logo-text">Afya<span>Chain</span></span>
+        </div>
+
+        <ul class="sidebar-menu">
+          <li>
+            <a href="patient-dashboard.html" class="sidebar-link">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2H6a2 2 0 01-2-2v-4zM14 16a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2h-2a2 2 0 01-2-2v-4z"></path></svg>
+              My Dashboard
+            </a>
+          </li>
+          <li>
+            <a href="upload-record.html" class="sidebar-link active">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path></svg>
+              Upload EMR File
+            </a>
+          </li>
+          <li>
+            <a href="access-management.html" class="sidebar-link">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+              Consent Manager
+            </a>
+          </li>
+          <li>
+            <a href="index.html" class="sidebar-link">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+              Logout Home
+            </a>
+          </li>
+        </ul>
+
+        <div class="sidebar-user">
+          <div class="user-avatar">AM</div>
+          <div class="user-info">
+            <span class="user-name">Alex Mercer</span>
+            <span class="user-role">ID: AM-9921-X</span>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Upload Workspace -->
+      <main class="dashboard-content">
+        <header style="margin-bottom: 2rem;">
+          <h1 style="font-size: 1.85rem; font-weight: 800; color: var(--primary-deep); margin-bottom: 0.25rem;">Cryptographically Anchor Medical Records</h1>
+          <p style="color: var(--text-muted); font-size: 0.95rem;">Upload medical histories, laboratory reports, or clinical diagnostics automatically sharded with Zero Knowledge Proofs.</p>
+        </header>
+
+        <!-- Main Card containing Upload Workstation -->
+        <div class="card" style="border-radius:16px;">
+          
+          <!-- State 1: Before Uploading Form -->
+          <div id="upload-form-body">
+            <h3 class="card-title" style="margin-bottom: 1.25rem;">Patient Decrypted Terminal Locker</h3>
+            
+            <form id="health-upload-form">
+              <!-- Drag and Drop Component -->
+              <div class="form-group">
+                <div class="upload-zone" id="drop-zone">
+                  <div class="upload-icon">📁</div>
+                  <p class="upload-title">Drag & Drop Secure File here</p>
+                  <p class="upload-text">Or click here to search local vaults. Encrypted on sandbox before upload.</p>
+                  <span id="upload-text-indicator" style="font-size:0.85rem; color: var(--blockchain-blue); font-weight:600;"></span>
+                  
+                  <input type="file" id="file-input" style="display: none;" accept=".pdf,.png,.jpg,.jpeg,.json,.csv">
+                </div>
+              </div>
+
+              <!-- Dynamically rendered hash generator block -->
+              <div class="form-group" id="hash-preview-container" style="display:none; flex-direction:column; gap:0.45rem;">
+                <label class="form-label" style="display:flex; align-items:center; gap:0.5rem;">
+                  <span style="color: var(--success);">✔</span> Generated Sharded IPFS CID Hash
+                </label>
+                <div class="blockchain-hash-container" style="display: flex;">
+                  <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 2a8 8 0 100 16 8 8 0 000-16zm1 11H9v-2h2v2zm0-4H9V5h2v4z" clip-rule="evenodd"></path></svg>
+                  <span class="hash-text" id="raw-hash-value">...</span>
+                </div>
+              </div>
+
+              <!-- Rest of form inputs -->
+              <div class="bento-grid" style="grid-template-columns: repeat(2, 1fr); gap:1.25rem;">
+                <div class="form-group" style="grid-column: span 1;">
+                  <label class="form-label" for="record-title">Folder/Record Title</label>
+                  <input type="text" class="form-control" id="record-title" placeholder="e.g. Cardiorespiratory Follow-up Exam" required>
+                </div>
+                <div class="form-group" style="grid-column: span 1;">
+                  <label class="form-label" for="hospital-name">Anchor Hospital/Clinic Node</label>
+                  <input type="text" class="form-control" id="hospital-name" placeholder="e.g. Nairobi National Hospital" required>
+                </div>
+                <div class="form-group" style="grid-column: span 1;">
+                  <label class="form-label" for="record-category">Diagnostic Folder Category</label>
+                  <select class="form-control" id="record-category">
+                    <option value="Cardiorespiratory Exam">Cardiorespiratory Exam</option>
+                    <option value="Blood Panel (Complete)">Blood Laboratory Assay</option>
+                    <option value="MRI Brain Scan">MRI Neurology image</option>
+                    <option value="General Prescription">General Clinical Prescription</option>
+                  </select>
+                </div>
+                <div class="form-group" style="grid-column: span 1;">
+                  <label class="form-label" for="record-date">Epoch Action Date</label>
+                  <input type="date" class="form-control" id="record-date" required>
+                </div>
+              </div>
+
+              <div class="alert alert-info" style="margin-top: 1rem; border-radius:12px;">
+                <svg class="alert-icon" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+                <div style="font-size:0.85rem; line-height:1.45;">
+                  <strong>Cryptographic Notice:</strong> The health data packet is encrypted completely end-to-end on your client local sandbox using decentralized AES symmetric encryption before moving over hospital relay nodes. Zero plaintext is visible on clinics network routers.
+                </div>
+              </div>
+
+              <div style="display:flex; justify-content:flex-end; gap:0.75rem; margin-top:1.5rem;">
+                <a href="patient-dashboard.html" class="btn btn-outline">Cancel</a>
+                <button type="submit" class="btn btn-primary" style="padding-left:2rem; padding-right:2rem;">Start Cryptographic Archiving</button>
+              </div>
+            </form>
+          </div>
+
+          <!-- State 2: Simulated Uploading Lock Status Progress -->
+          <div id="progress-status-container" style="display: none; padding: 3rem 1.5rem; text-align: center;">
+            <div style="margin: 1.5rem auto; width: 60px; height: 60px; border: 5px solid var(--border-color); border-top-color: var(--blockchain-blue); border-radius: 50%; animation: decrypt-spin 1s linear infinite;"></div>
+            
+            <h3 style="font-size: 1.35rem; color:var(--primary-deep); font-weight:800; margin-bottom: 0.35rem;" id="progress-status-label">Sealing Healthcare Ledger Block...</h3>
+            <p style="color:var(--text-muted); font-size:0.9rem; margin-bottom: 1.5rem;">Allocating transaction bits on global nodes.</p>
+
+            <div style="width: 100%; max-width: 480px; background-color: var(--border-color); height: 8px; border-radius: 99px; margin: 0 auto 0.75rem; overflow:hidden;">
+              <div id="progress-bar-indicator" style="width: 0%; height: 100%; background: linear-gradient(90deg, var(--blockchain-blue), var(--bright-cyan)); transition: width 0.1s linear;"></div>
+            </div>
+            <strong style="font-family: var(--font-mono); font-size:0.9rem; color: var(--blockchain-blue);" id="progress-value-text">0%</strong>
+          </div>
+
+        </div>
+      </main>
+
+    </div>
+
+    <!-- Live styles injection from header -->
+    <script src="../js/api.js"></script>
+    <script src="../js/upload.js"></script>
+  </body>
+</html>
