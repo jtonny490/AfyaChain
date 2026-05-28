@@ -1,16 +1,202 @@
 <!DOCTYPE html>
-<header>
-     <h1>AfyaChain</h1>
-</header>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AfyaChain - Your Health. Your Data. Your Control.</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="main-nav">
+      <div class="container navbar-inner">
+        <a href="index.html" class="brand-logo-container">
+          <div class="brand-icon">
+            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:100%;">
+              <defs>
+                <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#022E7A" />
+                  <stop offset="100%" stop-color="#0D6EFD" />
+                </linearGradient>
+              </defs>
+              <path d="M50 8 C72 8 85 18 85 18 C85 43 78 72 50 90 C22 72 15 43 15 18 C15 18 28 8 50 8 Z" fill="url(#shieldGrad)" stroke="#12B5FF" stroke-width="2.5" />
+              <rect x="5" y="25" width="4.5" height="4.5" fill="#5CCEFF" opacity="0.8" rx="1" />
+              <rect x="9" y="34" width="4.5" height="4.5" fill="#12B5FF" opacity="0.9" rx="1" />
+              <rect x="4" y="42" width="4.5" height="4.5" fill="#5CCEFF" opacity="0.7" rx="1" />
+              <rect x="8" y="50" width="5" height="5" fill="#0D6EFD" rx="1.5" />
+              <rect x="12" y="44" width="4" height="4" fill="#FFFFFF" opacity="0.8" rx="1" />
+              <rect x="13" y="30" width="4" height="4" fill="#12B5FF" rx="1" />
+              <path d="M52 48 H58 L61 36 L65 60 L68 45 L70 51 H76" stroke="#5CCEFF" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" />
+              <circle cx="50" cy="27" r="4.5" fill="#12B5FF" />
+              <path d="M36 39 C42 35 48 34 50 34 C52 34 58 35 64 39 C55 43 52 48 51 57 M49 57 C48 48 45 43 36 39" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M50 36 V60" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" />
+              <line x1="38" y1="67" x2="48" y2="59" stroke="#12B5FF" stroke-width="6" stroke-linecap="round" />
+              <line x1="42" y1="71" x2="52" y2="63" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" />
+            </svg>
+          </div>
+          AfyaChain
+        </a>
+        <div class="nav-links">
+          <a href="index.html" class="nav-link active">Home</a>
+          <a href="patient-dashboard.html" class="nav-link">Patient Portal</a>
+          <a href="doctor-dashboard.html" class="nav-link">Clinician Workspace</a>
+          <a href="upload-record.html" class="btn btn-primary btn-sm">Upload Record</a>
+        </div>
+      </div>
+    </nav>
 
-<form>
-    <label>Email</label>
-    <input type="email">
+    <!-- Hero Section -->
+    <header class="hero-section">
+      <div class="container">
+        <div class="hero-tag">
+          <span style="font-size:0.9rem;">⛓️</span> Empowering Patient Privacy via Blockchain Consensus
+        </div>
+        <h1 class="hero-headline">
+          Your Health.<br>Your Data. <span>Your Control.</span>
+        </h1>
+        <p class="hero-subheadline">
+          AfyaChain is a fully decentralized medical health platform. Empower patients with cryptographically secure, sovereign ownership of their personal medical record folders.
+        </p>
+        <div class="hero-ctas">
+          <a href="patient-dashboard.html" class="btn btn-accent btn-lg" id="patient-cta-btn">
+            Access Patient Control Center
+          </a>
+          <a href="doctor-dashboard.html" class="btn btn-outline btn-lg" id="doctor-cta-btn">
+            Connect Doctor Profile
+          </a>
+        </div>
+      </div>
+    </header>
 
-    <label>Password</label>
-    <input type="password">
+    <!-- Bento Grid Style Features Section -->
+    <section class="features-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Innovative Ledger Features</span>
+          <h2 class="section-title">Cryptographic Architecture designed for Patients</h2>
+        </div>
 
-    <button>Login</button>
-    <button>Enter Ecosystem</button>
-</form>
+        <div class="bento-grid">
+          <!-- Bento Grid Item 1: Health NFT Identity (Col span 2) -->
+          <div class="bento-card" style="grid-column: span 2;">
+            <svg class="blockchain-viz" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83M16.62 12l-5.73 9.94"/>
+            </svg>
+            <div>
+              <div class="badge-bento badge-bento-success" style="margin-bottom: 12px; display:inline-block;">ZK-Shielded ID</div>
+              <h3 class="feature-card-title">Sovereign Medical NFT Identity</h3>
+              <p class="feature-card-desc">Your medical identity is cryptographically hashed across distributed ledger layers, shielding your real details while resolving instant authentic clinics network handshakes.</p>
+            </div>
+            <div style="margin-top:20px; font-weight:700; color:var(--blockchain-blue); font-size: 0.9rem;">
+              Decentralized Identifiers (DIDs) active →
+            </div>
+          </div>
+
+          <!-- Bento Grid Item 2: Encrypted Records (Col span 2) -->
+          <div class="bento-card" style="grid-column: span 2; background: linear-gradient(135deg, var(--p-blue), var(--p-deep)); color: white;">
+            <div>
+              <div class="badge-bento badge-bento-cyan" style="margin-bottom: 12px; display:inline-block; background:rgba(255,255,255,0.15); color: white;">IPFS & AES-256</div>
+              <h3 class="feature-card-title" style="color:white; font-size:1.4rem;">Military-grade Sharded Lockers</h3>
+              <p class="feature-card-desc" style="color: rgba(255,255,255,0.8);">All health EMR uploads are split, encrypted with peer AES-256 protocols, and stored on global interplanetary storage clusters (IPFS). Zero-knowledge guarantees ensure no single authority views your files without clear patient consent blocks.</p>
+            </div>
+          </div>
+
+          <!-- Bento Grid Item 3: Permission Access (Col span 1) -->
+          <div class="bento-card" style="grid-column: span 1;">
+            <div>
+              <div class="feature-card-icon">🔑</div>
+              <h3 class="feature-card-title">Granular Access Control</h3>
+              <p class="feature-card-desc">Instantly authorize or revoke specific physician access. Extend permissions block timings or grant transient medical clinic view rights on-demand.</p>
+            </div>
+            <a href="access-management.html" style="font-size:0.85rem; color:var(--blockchain-blue); font-weight:600; margin-top:12px;">Manage Consents</a>
+          </div>
+
+          <!-- Bento Grid Item 4: Blockchain Audit Logs (Col span 3) -->
+          <div class="bento-card" style="grid-column: span 3;">
+            <svg class="blockchain-viz" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="2" width="8" height="8"/><rect x="14" y="14" width="8" height="8"/>
+              <path d="M10 6h4M14 18h-4M6 10v4M18 14v-4"/>
+            </svg>
+            <div>
+              <div class="badge-bento badge-bento-cyan" style="margin-bottom: 12px; display:inline-block;">ledger Audit Trail</div>
+              <h3 class="feature-card-title">Tamper-Proof Audit History</h3>
+              <p class="feature-card-desc">Every view request, EMR fetch, or clinician authority grant triggers a public ledger block. Check a verified record log that cannot be altered or deleted, maintaining immutable healthcare traces.</p>
+            </div>
+            <div style="font-size: 0.8rem; font-family:var(--font-mono); color: var(--text-muted); background: var(--bg-light); padding: 8px 12px; border-radius: 6px; margin-top: 15px; display:flex; justify-content:space-between; align-items:center;">
+              <span>Block Hash State:</span>
+              <strong>0x0d6efd12b5ff5cceff1c2430</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Intuitive Clinical Onboarding</span>
+          <h2 class="section-title">How AfyaChain Securely Operates</h2>
+        </div>
+
+        <div class="steps-container">
+          <!-- Step 1 -->
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <h3 class="step-title">Claim Decentralized ID</h3>
+            <p class="step-desc">Claim your cryptographically secure healthcare identity, pairing your cryptographic keys to your patient folder.</p>
+          </div>
+          <!-- Step 2 -->
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <h3 class="step-title">Upload and Encrypt EMR</h3>
+            <p class="step-desc">Upload files, lab assays, prescription blocks, or clinical diagnostics. Encryption keys seal files automatically before publishing.</p>
+          </div>
+          <!-- Step 3 -->
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <h3 class="step-title">Control Access & Audits</h3>
+            <p class="step-desc">Share access keys dynamically with your doctor. Revoke instantly if you transfer clinics, ensuring absolute data control.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Simple Footer -->
+    <footer class="simple-footer">
+      <div class="container footer-inner">
+        <div class="footer-logo">
+          <div class="brand-icon" style="width:28px; height:28px;">
+            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:100%;">
+              <defs>
+                <linearGradient id="shieldGradFooter" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#022E7A" />
+                  <stop offset="100%" stop-color="#0D6EFD" />
+                </linearGradient>
+              </defs>
+              <path d="M50 8 C72 8 85 18 85 18 C85 43 78 72 50 90 C22 72 15 43 15 18 C15 18 28 8 50 8 Z" fill="url(#shieldGradFooter)" stroke="#12B5FF" stroke-width="2.5" />
+              <rect x="5" y="25" width="4.5" height="4.5" fill="#5CCEFF" opacity="0.8" rx="1" />
+              <rect x="9" y="34" width="4.5" height="4.5" fill="#12B5FF" opacity="0.9" rx="1" />
+              <rect x="4" y="42" width="4.5" height="4.5" fill="#5CCEFF" opacity="0.7" rx="1" />
+              <rect x="8" y="50" width="5" height="5" fill="#0D6EFD" rx="1.5" />
+              <rect x="12" y="44" width="4" height="4" fill="#FFFFFF" opacity="0.8" rx="1" />
+              <rect x="13" y="30" width="4" height="4" fill="#12B5FF" rx="1" />
+              <path d="M52 48 H58 L61 36 L65 60 L68 45 L70 51 H76" stroke="#5CCEFF" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" />
+              <circle cx="50" cy="27" r="4.5" fill="#12B5FF" />
+              <path d="M36 39 C42 35 48 34 50 34 C52 34 58 35 64 39 C55 43 52 48 51 57 M49 57 C48 48 45 43 36 39" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M50 36 V60" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" />
+              <line x1="38" y1="67" x2="48" y2="59" stroke="#12B5FF" stroke-width="6" stroke-linecap="round" />
+              <line x1="42" y1="71" x2="52" y2="63" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" />
+            </svg>
+          </div>
+          AfyaChain <span>v1.0.0-Beta</span>
+        </div>
+        <p class="footer-copyright">
+          © 2026 AfyaChain. Built for Ethereum Healthcare Hackathon consensus. Sovereign control over medical storage.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
 
