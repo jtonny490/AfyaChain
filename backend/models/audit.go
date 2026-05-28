@@ -1,6 +1,11 @@
 package models
 
-import "time"
+import (
+	"crypto/sha256"
+	"encoding/hex"
+	"fmt"
+	"time"
+)
 
 type AuditAction string
 
@@ -17,20 +22,36 @@ const (
 )
 
 type AuditLog struct {
-	ID int `json:"id"`
-
+	ID     int         `json:"id"`
 	Action AuditAction `json:"action"`
 
-	ActorID  int `json:"actor_id"`
-	TargetID int `json:"target_id,omitempty"`
-
+	ActorID    int    `json:"actor_id"`
+	TargetID   int    `json:"target_id,omitempty"`
 	EntityType string `json:"entity_type"`
 
-	Description string `json:"description"`
+	Description string `json:"description,omitempty"`
 
 	IPAddress string `json:"ip_address,omitempty"`
 
-	CreatedAt time.Time `json:"created_at"`
+	PreviousHash string `json:"previous_hash"`
+	Hash         string `json:"hash"`
 
-	Hash string `json:"hash"`
+	CreatedAt time.Time `json:"created_at"`
+}
+
+func (a AuditLog) GenerateHash() string {
+	input := fmt.Sprintf(
+		"%d%s%d%d%s%s%s%s",
+		a.ID,
+		a.Action,
+		a.ActorID,
+		a.TargetID,
+		a.EntityType,
+		a.Description,
+		a.IPAddress,
+		a.PreviousHash,
+	)
+
+	hash := sha256.Sum256([]byte(input))
+	return hex.EncodeToString(hash[:])
 }
