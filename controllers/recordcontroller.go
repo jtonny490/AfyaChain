@@ -12,8 +12,10 @@ import (
 type Record struct {
 	PatientID int    `json:"patient_id"`
 	DoctorID  int    `json:"doctor_id"`
-	DataHash  string `json:"data_hash"`
+	Title     string `json:"title"`
+	Description string `json:"description"`
 	FileURL   string `json:"file_url"`
+	Hash      string `json:"hash"`
 }
 
 func UploadRecord(c *gin.Context) {
@@ -36,7 +38,7 @@ func GetRecords(c *gin.Context) {
 		return
 	}
 
-	var data []Record
+	var data []map[string]interface{}
 	json.Unmarshal(res, &data)
 
 	c.JSON(http.StatusOK, data)
