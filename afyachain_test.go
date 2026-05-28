@@ -145,3 +145,10 @@ func TestGrantAccess(t *testing.T) {
 		t.Fatalf("grant access failed: %d", res.Code)
 	}
 }
+func TestAuditLogs(t *testing.T) {
+	res := request("GET", "/api/audit", nil, true)
+
+	if res.Code != 200 {
+		t.Fatalf("audit logs failed: %d", res.Code)
+	}
+}
