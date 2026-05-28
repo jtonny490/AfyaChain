@@ -22,3 +22,18 @@ type User struct {
 	Gender      string `json:"gender"`
 	YearOfBirth int    `json:"year_of_birth"`
 }
+
+func (u User) IsValidRole() bool {
+	return u.Role == RolePatient || u.Role == RoleDoctor
+}
+
+func (u User) IsValidGender() bool {
+	return u.Gender == GenderMale || u.Gender == GenderFemale || u.Gender == GenderOther
+}
+
+func (u User) IsValidYearOfBirth() bool {
+	if u.YearOfBirth < 1900 || u.YearOfBirth > 2026 {
+		return false
+	}
+	return true
+}
