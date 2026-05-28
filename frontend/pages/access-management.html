@@ -162,7 +162,7 @@
 
           <!-- Col 3: Emergency Override Control Deck -->
           <div class="bento-card" style="grid-column: span 1; background: #fff5f5; border: 1.5px solid rgba(239, 68, 68, 0.25); justify-content: flex-start; gap: 1.15rem;">
-            <span class="card-title" style="color:var(--danger); font-weight:800; font-size: 0.8rem; letter-spacing:0.075em;">⚠️ Emergency Bypass Deck</span>
+            <span class="card-title" style="color:var(--danger); font-weight:800; font-size: 0.8rem; letter-spacing:0.075em;">Emergency Bypass Deck</span>
             <p style="font-size:0.85rem; line-height: 1.45; color: var(--text-dark);">
               In extreme events (e.g. trauma ward admissions), authorized clinicians are permitted to trigger a cryptographic bypass that temporarily overrides patient EMR locks for <strong>24 hours</strong>. This event is hardcoded as high-priority audit blocks.
             </p>
@@ -233,5 +233,11 @@
     <script src="../js/api.js"></script>
     <script src="../js/patient.js"></script>
     <script src="../js/access.js"></script>
+    <footer>
+      <p>&copy; <span id="year"></span>  AfyaChain. All Right Reserved.</p>
+      <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+      </script>
+    </footer>
   </body>
 </html>

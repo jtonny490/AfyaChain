@@ -199,19 +199,19 @@
             <span class="card-title">Sovereign Utilities</span>
             <div style="display: flex; flex-direction: column; gap:0.95rem; width:100%;">
               <a href="upload-record.html" class="btn btn-outline" style="width: 100%; justify-content: flex-start; gap: 0.85rem;">
-                📚 Upload Lab Assays
+                Upload Lab Assays
               </a>
               <a href="access-management.html" class="btn btn-outline" style="width: 100%; justify-content: flex-start; gap: 0.85rem;">
-                🛡️ Consent Delegation
+                 Consent Delegation
               </a>
               <button class="btn btn-outline" id="scan-qr-btn-utilities" style="width: 100%; justify-content: flex-start; gap: 0.85rem; border-color: var(--blockchain-blue); color: var(--blockchain-blue);">
-                📷 Instant QR Code Scan
+                Instant QR Code Scan
               </button>
               <hr style="border:none; border-top:1px solid var(--border-color); margin: 0.25rem 0;">
               <div>
                 <p style="font-size: 0.75rem; color:var(--text-muted); margin-bottom: 0.5rem; font-weight:500;">EMERGENCY ACCORD PROTOCOL</p>
                 <button class="btn btn-danger" id="emergency-access-btn" style="width: 100%; font-size:0.85rem;">
-                  🚨 Emergency Bypass Override
+                   Emergency Bypass Override
                 </button>
               </div>
             </div>
@@ -225,5 +225,12 @@
     <!-- Scripts Integration with proper order -->
     <script src="../js/api.js"></script>
     <script src="../js/patient.js"></script>
+    <footer>
+      <p>&copy; <span id="year"></span>  AfyaChain. All Rights Reserved.</p>
+      <script>
+        // Dynamically set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+    </footer>
   </body>
 </html>

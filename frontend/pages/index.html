@@ -105,7 +105,7 @@
           <!-- Bento Grid Item 3: Permission Access (Col span 1) -->
           <div class="bento-card" style="grid-column: span 1;">
             <div>
-              <div class="feature-card-icon">🔑</div>
+              <div class="feature-card-icon"></div>
               <h3 class="feature-card-title">Granular Access Control</h3>
               <p class="feature-card-desc">Instantly authorize or revoke specific physician access. Extend permissions block timings or grant transient medical clinic view rights on-demand.</p>
             </div>
@@ -193,7 +193,11 @@
           AfyaChain <span>v1.0.0-Beta</span>
         </div>
         <p class="footer-copyright">
-          © 2026 AfyaChain. Built for Ethereum Healthcare Hackathon consensus. Sovereign control over medical storage.
+    
+          <script>
+            // Dynamically set current year in footer
+            document.querySelector('.footer-copyright').innerHTML = `© ${new Date().getFullYear()} AfyaChain. Built for NFT  Healthcare Hackathon at Zone01 Kisumu. Sovereign control over patients medical datastorage.`;
+          </script>
         </p>
       </div>
     </footer>

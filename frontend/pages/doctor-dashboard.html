@@ -221,5 +221,12 @@
     <!-- Script components -->
     <script src="../js/api.js"></script>
     <script src="../js/doctor.js"></script>
+    <footer>
+      <p>&copy; <span id="year"></span>  AfyaChain. All Rights Reserved.</p>
+      <script>
+        // Dynamically set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+    </footer>
   </body>
 </html>

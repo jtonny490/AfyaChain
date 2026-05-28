@@ -128,7 +128,7 @@
               <!-- Drag and Drop Component -->
               <div class="form-group">
                 <div class="upload-zone" id="drop-zone">
-                  <div class="upload-icon">📁</div>
+                  <div class="upload-icon"></div>
                   <p class="upload-title">Drag & Drop Secure File here</p>
                   <p class="upload-text">Or click here to search local vaults. Encrypted on sandbox before upload.</p>
                   <span id="upload-text-indicator" style="font-size:0.85rem; color: var(--blockchain-blue); font-weight:600;"></span>
@@ -208,5 +208,12 @@
     <!-- Live styles injection from header -->
     <script src="../js/api.js"></script>
     <script src="../js/upload.js"></script>
+    <footer>
+      <p>&copy; <span id="year"></span>  AfyaChain. All Rights Reserved.</p>
+      <script>
+        // Dynamically set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+    </footer>
   </body>
 </html>
