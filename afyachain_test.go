@@ -132,4 +132,16 @@ func TestGetRecords(t *testing.T) {
 	}
 }
 
-q
+func TestGrantAccess(t *testing.T) {
+	body := []byte(`{
+		"record_id":1,
+		"user_id":2,
+		"granted":true
+	}`)
+
+	res := request("POST", "/api/access", body, true)
+
+	if res.Code != 200 {
+		t.Fatalf("grant access failed: %d", res.Code)
+	}
+}
