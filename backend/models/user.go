@@ -1,5 +1,16 @@
 package models
 
+const (
+	RolePatient = "patient"
+	RoleDoctor  = "doctor"
+)
+
+const (
+	GenderMale   = "male"
+	GenderFemale = "female"
+	GenderOther  = "other"
+)
+
 type User struct {
 	ID          int    `json:"id"`
 	FirstName   string `json:"first_name"`
