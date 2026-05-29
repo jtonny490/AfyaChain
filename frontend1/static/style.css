@@ -1,0 +1,235 @@
+/* Modern Design Variables for AfyaChain Application Layout */
+:root {
+    --primary: #0284c7;             /* Clean Healthcare Teal/Blue */
+    --primary-hover: #0369a1;       /* Darker Active State Blue */
+    --bg-main: #f8fafc;             /* Premium Light Slate Canvas */
+    --surface: #ffffff;             /* Card Panels Foundation Layout */
+    --border-color: #e2e8f0;        /* Subtle Accessible Borders */
+    --text-main: #0f172a;           /* Strong Readable Headers */
+    --text-muted: #64748b;          /* Softer Descriptive Metadata Text */
+    --success: #10b981;             /* Live Ledger Green Badge Indicator */
+    --success-bg: #ecfdf5;          /* Soft Mint Background Highlight */
+    --radius-lg: 12px;              /* Standardized Interface Rounding Curve */
+    --radius-md: 6px;
+    --shadow-md: 0 4px 20px -2px rgba(15, 23, 42, 0.06), 0 2px 6px -1px rgba(15, 23, 42, 0.03);
+    --transition: all 0.2s ease-in-out;
+}
+
+/* Global Setup & Layout Foundation Layout Blocks */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 0;
+}
+
+/* Page Layout Wrappers for Centering Panels */
+.main-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 auto;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+.container, .hero {
+    flex: none; /* Prevents flex grow from distorting maximum asset sizes */
+}
+
+/* Main Auth and Form Container Card Layouts */
+.container {
+    background: var(--surface);
+    padding: 36px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
+    width: 100%;
+    max-width: 460px;
+    box-sizing: border-box;
+}
+
+h2, h3 {
+    color: var(--text-main);
+    margin-top: 0;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+h2 { font-size: 24px; margin-bottom: 20px; }
+h3 { font-size: 18px; margin-bottom: 16px; margin-top: 24px; }
+
+/* Input fields & Select elements layout rules */
+input, select {
+    width: 100%;
+    padding: 12px 14px;
+    margin: 8px 0 16px 0;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    box-sizing: border-box;
+    font-size: 14px;
+    background-color: #ffffff;
+    color: var(--text-main);
+    transition: var(--transition);
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+}
+
+/* Action Buttons Logic Styles */
+button {
+    width: 100%;
+    background-color: var(--primary);
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 8px;
+    transition: var(--transition);
+}
+
+button:hover {
+    background-color: var(--primary-hover);
+    box-shadow: 0 4px 12px rgba(2, 132, 199, 0.15);
+}
+
+/* Anchor Navigation Elements Scopes */
+a {
+    display: block;
+    text-align: center;
+    margin-top: 18px;
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--primary-hover);
+    text-decoration: underline;
+}
+
+/* Medical History Ledger Table Presentation Formatting Layouts */
+.records-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 16px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.records-table th, .records-table td {
+    padding: 12px 14px;
+    text-align: left;
+    font-size: 14px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.records-table th {
+    background-color: #f8fafc;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.records-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Blockchain NFT Token Verification Badges */
+.nft-badge {
+    background-color: var(--success-bg);
+    color: var(--success);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    display: inline-block;
+}
+
+/* Sticky Bottom Application Footer Styles */
+.app-footer {
+    background-color: var(--surface);
+    border-top: 1px solid var(--border-color);
+    padding: 24px 16px;
+    margin-top: auto; /* Uses auto margins to stick firmly down */
+    width: 100%;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+}
+
+.app-footer p {
+    margin: 0;
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.footer-links {
+    display: flex;
+    gap: 24px;
+}
+
+.footer-links a {
+    margin-top: 0; /* Clear container spacing offset scopes */
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* Nairobi Node Connection Status Tracking Micro-Badges */
+.node-status {
+    font-size: 12px !important;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #f1f5f9;
+    padding: 4px 12px;
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    font-weight: 500;
+}
+
+.status-indicator {
+    color: var(--success);
+    font-size: 10px;
+}
+
+/* Mobile responsive breaking grid modifications */
+@media (max-width: 480px) {
+    .container {
+        padding: 24px;
+    }
+    .footer-content {
+        gap: 16px;
+    }
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

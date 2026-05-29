@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="container">
+    <h2>Login</h2>
+    <input id="email" placeholder="Email"><br/>
+    <input id="password" type="password" placeholder="Password"><br />
+    <button onclick="login()">Login</button> <br />
+    <a href="index.html">Don't have an account? Register</a>
+</div>
+<script src="app.js"></script>
+<script src="index.js"></script>
+
+<footer class="app-footer">
+    <div class="footer-content">
+        <p>&copy; <span id="year"></span>  AfyaChain. All rights reserved.</p>
+         <script>
+        document.getElementById('year').textContent=new Date().getFullYear()
+    </script>
+        <div class="footer-links">
+            <a href="#privacy">Privacy Policy</a>
+            <a href="#terms">Terms of Service</a>
+            <a href="#support">Support</a>
+        </div>
+        <p class="node-status">Connected Node: <span class="status-indicator">●</span> Nairobi Ethereum Server</p>
+    </div>
+</footer>
+</body>
+</html>
