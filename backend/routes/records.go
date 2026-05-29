@@ -1,13 +1,13 @@
 package routes
 
 import (
-	"net/http"
-	"afyachain/backend/controllers"
-	"afyachain/backend/utils"
+	"afyachain/controllers"
+	"afyachain/utils"
+
+	"github.com/gin-gonic/gin"
 )
 
-// RecordRoutes handles fetching and creating medical records (Requires Authentication)
-func RecordRoutes(mux *http.ServeMux) {
-	mux.HandleFunc("/api/records", utils.AuthMiddleware(controllers.GetRecords))
-	mux.HandleFunc("/api/records/create", utils.AuthMiddleware(controllers.CreateRecord))
+func RecordRoutes(r *gin.RouterGroup) {
+	r.POST("/records", utils.AuthMiddleware(), controllers.UploadRecord)
+	r.GET("/records", utils.AuthMiddleware(), controllers.GetRecords)
 }
