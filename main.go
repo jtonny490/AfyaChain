@@ -1,31 +1,50 @@
 package main
 
 import (
+	"afyachain/controllers"
+	"afyachain/routes"
 	"log"
 	"os"
-
-	"afyachain/db"
-	"afyachain/routes"
 
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
 )
 
 func main() {
+	// Load .env file
+	if err := godotenv.Load(); err != nil {
+		log.Println("No .env file found")
+	} else {
+		log.Println(".env file loaded successfully")
+	}
 
-	_ = godotenv.Load()
+	// Debug: Check if environment variables are loaded
+	supabaseURL := os.Getenv("SUPABASE_URL")
+	supabaseKey := os.Getenv("SUPABASE_KEY")
+	log.Printf("SUPABASE_URL: %v", supabaseURL)
+	log.Printf("SUPABASE_KEY length: %d", len(supabaseKey))
 
-	db.Init()
+	// Initialize blockchain contracts
+	controllers.InitContracts()
 
 	r := gin.Default()
 
-	routes.SetupRoutes(r)
+	// =========================
+	// 🔹 SERVE FRONTEND FILES
+	// =========================
+	r.Static("/frontend", "./frontend")
+	r.StaticFile("/", "./frontend/index.html")
 
-	port := os.Getenv("PORT")
-	if port == "" {
-		port = "8080"
+	// =========================
+	// 🔹 API ROUTES
+	// =========================
+	api := r.Group("/api")
+	{
+		routes.AuthRoutes(api)
+		routes.RecordRoutes(api)
+		routes.AccessRoutes(api)
+		routes.AuditRoutes(api)
 	}
 
-	log.Println("Server running on :" + port)
-	r.Run(":" + port)
+	r.Run(":8080")
 }
