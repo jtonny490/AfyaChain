@@ -16,7 +16,11 @@ type Access struct {
 
 func GrantAccess(c *gin.Context) {
 	var access Access
-	c.ShouldBindJSON(&access)
+
+	if err := c.ShouldBindJSON(&access); err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+		return
+	}
 
 	res, err := db.Insert("access", access)
 	if err != nil {
