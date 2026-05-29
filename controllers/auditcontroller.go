@@ -8,7 +8,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func GetAuditLogs(c *gin.Context) {
+func GetAuditLogs(c *gin.Context){
 
 	res, err := db.Select("audit", "")
 	if err != nil {
