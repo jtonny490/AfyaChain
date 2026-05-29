@@ -1,0 +1,6 @@
+{
+  "name": "AfyaChain",
+  "description": "A secure, blockchain-powered healthcare record consent and patient-provider management platform.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_AFYACHAIN_API"]
+}
