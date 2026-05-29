@@ -1,56 +1,60 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="/static/style.css">
+    <title>Home - AfyaChain</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body onload="loadUser()"> <!-- Automatically decodes the token on load -->
+<body onload="loadUser()">
 
 <div class="container">
-    <h2>Welcome to AfyaChain Control Center</h2>
-    <p>User ID: <span id="userId"></span></p>
-    <p>Role: <span id="role"></span></p>
+    <h2>Dashboard</h2>
+
+    <p><b>User ID:</b> <span id="userId"></span></p>
+    <p><b>Role:</b> <span id="role"></span></p>
+
     <button onclick="logout()">Logout</button>
+</div>
 
-    <!-- Hidden by default; turned on by loadUser() for patients -->
-    <div id="recordFormContainer" style="display:none;">
-        <h3>Mint Patient Record NFT</h3>
-        <form id="recordForm" onsubmit="createRecord(event)">
-            <input id="title" placeholder="Record Title" required>
-            <input id="description" placeholder="Description" required>
-            <select id="recordType">
-                <option value="Prescription">Prescription</option>
-                <option value="Lab Result">Lab Result</option>
-                <option value="Vaccination">Vaccination</option>
+<!-- Patient Record Creation Form -->
+<div class="container" id="recordFormContainer" style="display: none;">
+    <h3>Create Patient Record (NFT)</h3>
+    <form id="recordForm" onsubmit="createRecord(event)">
+        <div class="form-group">
+            <label for="title">Title:</label>
+            <input type="text" id="title" required>
+        </div>
+
+        <div class="form-group">
+            <label for="description">Description:</label>
+            <textarea id="description" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="recordType">Record Type:</label>
+            <select id="recordType" required>
+                <option value="diagnosis">Diagnosis</option>
+                <option value="prescription">Prescription</option>
+                <option value="otc">OTC</option>
+                <option value="lab">Lab Result</option>
+                <option value="follow_up">Follow Up</option>
             </select>
-            <input type="date" id="dateOfEvent" required>
-            <button type="submit">Create Ledger Record</button>
-        </form>
-    </div>
+        </div>
 
-    <div id="recordsContainer" style="display:none;">
-        <h3>Your Decentralized Medical History Ledger</h3>
-        <div id="recordsList">Loading records...</div>
-    </div>
+        <div class="form-group">
+            <label for="dateOfEvent">Date of Event:</label>
+            <input type="date" id="dateOfEvent" required>
+        </div>
+
+        <button type="submit">Create NFT Record</button>
+    </form>
+</div>
+
+<!-- Records List -->
+<div class="container" id="recordsContainer" style="display: none;">
+    <h3>Your Records</h3>
+    <div id="recordsList"></div>
 </div>
 
 <script src="app.js"></script>
-
-<footer class="app-footer">
-    <div class="footer-content">
-        <p>&copy; <span id="year"></span>  AfyaChain. All rights reserved.</p>
-         <script>
-        document.getElementById('year').textContent=new Date().getFullYear()
-    </script>
-        <div class="footer-links">
-            <a href="#privacy">Privacy Policy</a>
-            <a href="#terms">Terms of Service</a>
-            <a href="#support">Support</a>
-        </div>
-        <p class="node-status">Connected Node: <span class="status-indicator">●</span> Nairobi Ethereum Server</p>
-    </div>
-</footer>
-
-   
 </body>
 </html>

@@ -52,4 +52,6 @@ type Record struct {
 	CreatedAt    string          `json:"created_at"`
 
 	Hash         string          `json:"hash"`
+	TokenID      string          `json:"token_id,omitempty"`
+	TxHash       string          `json:"tx_hash,omitempty"`
 }

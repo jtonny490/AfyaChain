@@ -44,8 +44,8 @@ type User struct {
 
 	DoctorLevel   string    `json:"doctor_level,omitempty"`
 
-	CreatedAt     time.Time `json:"created_at"`
-	UpdatedAt     time.Time `json:"updated_at"`
+	CreatedAt     string    `json:"created_at"`
+	UpdatedAt     string    `json:"updated_at"`
 }
 
 func (u User) IsValidRole() bool {

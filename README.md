@@ -57,13 +57,3 @@ afyachain/
 ├── README.md
 └── go.
 </pre>
-## Run Locally
-<pre>
-Prerequisites:  install Node.js
-
-
-1. Install dependencies:
-   npm install
-2. Run the app:
-   `npm run dev`
-</pre>

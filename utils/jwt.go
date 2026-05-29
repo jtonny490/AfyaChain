@@ -5,7 +5,7 @@ import (
 	"github.com/golang-jwt/jwt/v5"
 )
 
-var jwtKey = []byte("afyachain_super_secret_key")
+var jwtKey = []byte("e5601008-15d5-416b-8b0b-ac64f101fa61")
 
 type Claims struct {
 	UserID string `json:"user_id"`
