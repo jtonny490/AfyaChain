@@ -1,27 +1,21 @@
 package utils
 
 import (
-	"context"
 	"net/http"
-	"strings"
+
+	"github.com/gin-gonic/gin"
 )
 
-func AuthMiddleware(next http.HandlerFunc) http.HandlerFunc {
-	return func(w http.ResponseWriter, r *http.Request) {
-		authHeader := r.Header.Get("Authorization")
-		if authHeader == "" {
-			http.Error(w, "Missing token", http.StatusUnauthorized)
-			return
-		}
-		
-		tokenString := strings.Split(authHeader, "Bearer ")[1]
-		claims, err := ValidateToken(tokenString)
-		if err != nil {
-			http.Error(w, "Invalid token", http.StatusUnauthorized)
+func AuthMiddleware() gin.HandlerFunc {
+	return func(c *gin.Context) {
+		token := c.GetHeader("Authorization")
+
+		if token == "" {
+			c.JSON(http.StatusUnauthorized, gin.H{"error": "missing token"})
+			c.Abort()
 			return
 		}
 
-		ctx := context.WithValue(r.Context(), "user", claims)
-		next.ServeHTTP(w, r.WithContext(ctx))
+		c.Next()
 	}
 }
