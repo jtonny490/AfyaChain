@@ -1,12 +1,12 @@
 package routes
 
 import (
-	"net/http"
-	"afyachain/backend/controllers"
-	"afyachain/backend/utils"
+	"afyachain/controllers"
+	"afyachain/utils"
+
+	"github.com/gin-gonic/gin"
 )
 
-// AuditRoutes handles querying the immutable blockchain logs
-func AuditRoutes(mux *http.ServeMux) {
-	mux.HandleFunc("/api/audit", utils.AuthMiddleware(controllers.GetAudits))
+func AuditRoutes(r *gin.RouterGroup) {
+	r.GET("/audit", utils.AuthMiddleware(), controllers.GetAuditLogs)
 }
