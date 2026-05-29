@@ -1,13 +1,12 @@
 package routes
 
 import (
-	"net/http"
-	"afyachain/backend/controllers"
-	"afyachain/backend/utils"
+	"afyachain/controllers"
+	"afyachain/utils"
+
+	"github.com/gin-gonic/gin"
 )
 
-// AccessRoutes handles granting/revoking permission to doctors/hospitals
-func AccessRoutes(mux *http.ServeMux) {
-	mux.HandleFunc("/api/access/grant", utils.AuthMiddleware(controllers.GrantAccess))
-	// Future: mux.HandleFunc("/api/access/revoke", utils.AuthMiddleware(controllers.RevokeAccess))
+func AccessRoutes(r *gin.RouterGroup) {
+	r.POST("/access", utils.AuthMiddleware(), controllers.GrantAccess)
 }
