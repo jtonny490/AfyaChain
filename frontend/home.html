@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body onload="loadUser()"> <!-- Automatically decodes the token on load -->
+
+<div class="container">
+    <h2>Welcome to AfyaChain Control Center</h2>
+    <p>User ID: <span id="userId"></span></p>
+    <p>Role: <span id="role"></span></p>
+    <button onclick="logout()">Logout</button>
+
+    <!-- Hidden by default; turned on by loadUser() for patients -->
+    <div id="recordFormContainer" style="display:none;">
+        <h3>Mint Patient Record NFT</h3>
+        <form id="recordForm" onsubmit="createRecord(event)">
+            <input id="title" placeholder="Record Title" required>
+            <input id="description" placeholder="Description" required>
+            <select id="recordType">
+                <option value="Prescription">Prescription</option>
+                <option value="Lab Result">Lab Result</option>
+                <option value="Vaccination">Vaccination</option>
+            </select>
+            <input type="date" id="dateOfEvent" required>
+            <button type="submit">Create Ledger Record</button>
+        </form>
+    </div>
+
+    <div id="recordsContainer" style="display:none;">
+        <h3>Your Decentralized Medical History Ledger</h3>
+        <div id="recordsList">Loading records...</div>
+    </div>
+</div>
+
+<script src="app.js"></script>
+
+<footer class="app-footer">
+    <div class="footer-content">
+        <p>&copy; <span id="year"></span>  AfyaChain. All rights reserved.</p>
+         <script>
+        document.getElementById('year').textContent=new Date().getFullYear()
+    </script>
+        <div class="footer-links">
+            <a href="#privacy">Privacy Policy</a>
+            <a href="#terms">Terms of Service</a>
+            <a href="#support">Support</a>
+        </div>
+        <p class="node-status">Connected Node: <span class="status-indicator">●</span> Nairobi Ethereum Server</p>
+    </div>
+</footer>
+
+   
+</body>
+</html>
